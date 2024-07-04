@@ -1,12 +1,13 @@
+import React from "react";
 import { useState } from "react";
 import { useForm } from "../../hooks/useForm";
 import { ContactFormState } from "../../interfaces/ContactFormState";
 
-import InputField from "@/Form/InputField/InputField";
-import TextArea from "@/Form/TextArea/TextArea";
-import SubmitButton from "@/Form/SubmitButton/SubmitButton";
 
 import styles from "./ContactForm.module.css";
+import InputField from "@/components/Form/InputField/InputField";
+import TextArea from "@/components/Form/TextArea/TextArea";
+import SubmitButton from "@/components/Form/SubmitButton/SubmitButton";
 
 const ContactForm = () => {
     const [form, errors, handleChange, isFormValid, resetForm] =

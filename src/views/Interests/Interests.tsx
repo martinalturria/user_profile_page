@@ -1,3 +1,4 @@
+import React from "react";
 import InterestItem from "../../components/InterestItem/InterestItem";
 
 import styles from "./Interests.module.css";

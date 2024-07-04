@@ -1,8 +1,9 @@
+import React from "react";
 import { FC, useEffect, useState } from 'react';
-import { TextAreaProps } from '../../interfaces/TextAreaProps';
-import styles from './TextArea.module.css';
+import { InputFieldProps } from '../../../interfaces/InputFieldProps';
+import styles from './InputField.module.css';
 
-const TextArea: FC<TextAreaProps> = ({ label, name, value, onChange, error }) => {
+const InputField: FC<InputFieldProps> = ({ label, type, name, value, onChange, error }) => {
   const [isTouched, setIsTouched] = useState(false);
 
   useEffect(() => {
@@ -11,25 +12,25 @@ const TextArea: FC<TextAreaProps> = ({ label, name, value, onChange, error }) =>
     }
   }, [value]);
 
-  let textareaClassName = styles.textareaInitial;
+  let inputClassName = styles.inputInitial;
   if (isTouched) {
-    textareaClassName = error ? styles.textareaError : styles.textareaSuccess;
+    inputClassName = error ? styles.inputError : styles.inputSuccess;
   }
 
   return (
     <div className={styles.field}>
-      <textarea
-        className={`${styles.textarea} ${textareaClassName}`}
+      <input
+        className={`${styles.input} ${inputClassName}`}
+        type={type}
         name={name}
         value={value}
         onChange={onChange}
         required
-        placeholder=" "
-      ></textarea>
+      />
       <label className={styles.label}>{label}</label>
       {error && <span className={styles.errorMessage}>{error}</span>}
     </div>
   );
 };
 
-export default TextArea;
+export default InputField;

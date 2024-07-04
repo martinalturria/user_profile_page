@@ -1,3 +1,4 @@
+import React from "react";
 import UserName from "./UserName/UserName";
 import ProfilePicture from "./ProfilePicture/ProfilePicture";
 
