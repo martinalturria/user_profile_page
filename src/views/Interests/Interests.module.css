@@ -1,0 +1,13 @@
+.interests {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .heading {
+    margin-bottom: 1rem;
+  }
+  
+  .list {
+    list-style-type: none;
+    padding: 0;
+  }
