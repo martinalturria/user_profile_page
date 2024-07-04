@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# User Profile Application
 
-## Getting Started
+Esta es una aplicación de perfil de usuario construida con Next.js y React. Incluye funcionalidades como un formulario de contacto, lista de intereses.
 
-First, run the development server:
+## Características
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Formulario de Contacto**: Permite a los usuarios enviar mensajes con validación de formulario.
+- **Lista de Intereses**: Muestra una lista de intereses del usuario.
+- **Pruebas Unitarias**: Se incluyen pruebas para los componentes principales usando Jest y React Testing Library.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Instalación
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clona el repositorio:
+    ```sh
+    git clone https://github.com/martinalturria/user_profile_page
+    cd user-profile
+    ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+2. Instala las dependencias:
+    ```sh
+    npm install
+    ```
 
-## Learn More
+3. Inicia la aplicación en modo desarrollo:
+    ```sh
+    npm run dev
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+## Scripts Disponibles
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `npm run dev`: Inicia el servidor de desarrollo.
+- `npm test`: Ejecuta las pruebas.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Estructura del Proyecto
 
-## Deploy on Vercel
+- `src/`
+  - `components/`: Componentes reutilizables de la aplicación.
+  - `hooks/`: Hooks personalizados.
+  - `interfaces/`: Definiciones de TypeScript para props y estados.
+  - `views/`: Vistas principales de la aplicación.
+  - `pages/`: Componentes de Ruta para la Aplicación.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Pruebas
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Las pruebas están ubicadas en la carpeta `tests/`. Para ejecutar las pruebas, usa el comando `npm test`.
+

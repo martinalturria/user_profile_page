@@ -1,8 +1,6 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { useForm } from "../../hooks/useForm";
 import { ContactFormState } from "../../interfaces/ContactFormState";
-
 
 import styles from "./ContactForm.module.css";
 import InputField from "@/components/Form/InputField/InputField";

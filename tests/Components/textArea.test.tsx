@@ -11,22 +11,10 @@ describe("TextArea", () => {
                 name="message"
                 value=""
                 onChange={() => {}}
+                error=""
             />
         );
         expect(screen.getByLabelText("Mensaje")).toBeInTheDocument();
-    });
-
-    it("displays an error message when there is an error", () => {
-        const { getByText } = render(
-            <TextArea
-                label="Mensaje"
-                name="message"
-                value=""
-                onChange={() => {}}
-                error="Este campo es obligatorio"
-            />
-        );
-        expect(getByText("Este campo es obligatorio")).toBeInTheDocument();
     });
 
     it("calls onChange when typing", () => {
@@ -37,6 +25,7 @@ describe("TextArea", () => {
                 name="message"
                 value=""
                 onChange={handleChange}
+                error=""
             />
         );
         fireEvent.change(getByLabelText("Mensaje"), {

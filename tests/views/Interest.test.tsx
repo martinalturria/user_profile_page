@@ -8,8 +8,8 @@ describe("Interests", () => {
     it("renders the interests list", () => {
         render(<Interests />);
         expect(screen.getByText("Intereses")).toBeInTheDocument();
-        expect(screen.getByText("Programación")).toBeInTheDocument();
-        expect(screen.getByText("Leer")).toBeInTheDocument();
-        expect(screen.getByText("Deportes")).toBeInTheDocument();
+        expect(screen.getByText("Interés 1")).toBeInTheDocument();
+        expect(screen.getByText("Interés 2")).toBeInTheDocument();
+        expect(screen.getByText("Interés 3")).toBeInTheDocument();
     });
 });

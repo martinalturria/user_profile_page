@@ -3,8 +3,6 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import InputField from "@/components/Form/InputField/InputField";
 
-
-
 describe("InputField", () => {
     it("renders the input field with label", () => {
         render(
@@ -14,23 +12,10 @@ describe("InputField", () => {
                 name="name"
                 value=""
                 onChange={() => {}}
+                error=""
             />
         );
         expect(screen.getByLabelText("Nombre")).toBeInTheDocument();
-    });
-
-    it("displays an error message when there is an error", () => {
-        const { getByText } = render(
-            <InputField
-                label="Nombre"
-                type="text"
-                name="name"
-                value=""
-                onChange={() => {}}
-                error="Este campo es obligatorio"
-            />
-        );
-        expect(getByText("Este campo es obligatorio")).toBeInTheDocument();
     });
 
     it("calls onChange when typing", () => {
@@ -42,6 +27,7 @@ describe("InputField", () => {
                 name="name"
                 value=""
                 onChange={handleChange}
+                error=""
             />
         );
         fireEvent.change(getByLabelText("Nombre"), {

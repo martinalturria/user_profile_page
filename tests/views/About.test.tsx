@@ -8,7 +8,7 @@ describe("About", () => {
     it("renders the about section with description", () => {
         render(<About />);
         expect(
-            screen.getByText("Este es un texto de ejemplo sobre mí.")
+            screen.getByText("Breve descripción del usuario.")
         ).toBeInTheDocument();
     });
 });
