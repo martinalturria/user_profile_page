@@ -4,4 +4,5 @@ export interface InputFieldProps {
     name: string;
     value: string;
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-}
+    error?: string | null;
+  }

@@ -4,21 +4,21 @@ import { ContactFormState } from "../../interfaces/ContactFormState";
 
 import InputField from "@/Form/InputField/InputField";
 import TextArea from "@/Form/TextArea/TextArea";
+import SubmitButton from "@/Form/SubmitButton/SubmitButton";
 
 import styles from "./ContactForm.module.css";
 
 const ContactForm = () => {
-    const [form, handleChange, resetForm] = useForm<ContactFormState>({
-        name: "",
-        email: "",
-        message: "",
-    });
+    const [form, errors, handleChange, isFormValid, resetForm] =
+        useForm<ContactFormState>({ name: "", email: "", message: "" });
     const [success, setSuccess] = useState(false);
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        setSuccess(true);
-        resetForm();
+        if (isFormValid()) {
+            setSuccess(true);
+            resetForm();
+        }
     };
 
     return (
@@ -36,6 +36,7 @@ const ContactForm = () => {
                         name="name"
                         value={form.name}
                         onChange={handleChange}
+                        error={errors.name}
                     />
                     <InputField
                         label="Email"
@@ -43,16 +44,18 @@ const ContactForm = () => {
                         name="email"
                         value={form.email}
                         onChange={handleChange}
+                        error={errors.email}
                     />
                     <TextArea
                         label="Mensaje"
                         name="message"
                         value={form.message}
                         onChange={handleChange}
+                        error={errors.message}
                     />
-                    <button className={styles.button} type="submit">
+                    <SubmitButton disabled={!isFormValid()}>
                         Enviar
-                    </button>
+                    </SubmitButton>
                 </form>
             )}
         </section>
