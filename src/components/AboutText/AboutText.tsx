@@ -1,10 +1,7 @@
 import { FC } from "react";
+import { AboutTextProps } from "@/interfaces/AboutTextProps";
 
 import styles from "./AboutText.module.css";
-
-type AboutTextProps = {
-    text: string;
-};
 
 const AboutText: FC<AboutTextProps> = ({ text }) => {
     return <p className={styles.text}>{text}</p>;
