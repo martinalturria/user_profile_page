@@ -6,10 +6,12 @@ import ContactForm from "@/views/ContactForm/ContactForm";
 const Home = () => {
     return (
         <div>
-            <Header />
-            <About />
-            <Interests />
-            <ContactForm />
+            <div className="container">
+                <Header />
+                <About />
+                <Interests />
+                <ContactForm />
+            </div>
         </div>
     );
 };

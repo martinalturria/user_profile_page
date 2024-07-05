@@ -1,24 +1,42 @@
-import React, { FC, useEffect, useState } from 'react';
-import { TextAreaProps } from '../../../interfaces/TextAreaProps';
-import styles from './TextArea.module.css';
+import React, { FC, useEffect, useState } from "react";
+import { TextAreaProps } from "../../../interfaces/textAreaProps";
+import styles from "./TextArea.module.css";
 
-const TextArea: FC<TextAreaProps> = ({ label, name, value, onChange, error }) => {
+const TextArea: FC<TextAreaProps> = ({
+    label,
+    name,
+    value,
+    onChange,
+    error,
+    reset,
+}) => {
     const [isTouched, setIsTouched] = useState(false);
 
     useEffect(() => {
-        if (value !== '') {
+        if (value !== "") {
             setIsTouched(true);
+        } else if (reset) {
+            setIsTouched(false);
         }
-    }, [value]);
+    }, [value, reset]);
 
     let textareaClassName = styles.textareaInitial;
+    let labelClassName = styles.label;
     if (isTouched) {
-        textareaClassName = error ? styles.textareaError : styles.textareaSuccess;
+        textareaClassName = error
+            ? styles.textareaError
+            : styles.textareaSuccess;
+        labelClassName = error ? styles.labelError : styles.labelSuccess;
     }
 
     return (
         <div className={styles.field}>
-            <label htmlFor={name} className={styles.label}>{label}</label>
+            <label
+                htmlFor={name}
+                className={`${styles.label} ${labelClassName}`}
+            >
+                {label}
+            </label>
             <textarea
                 id={name}
                 className={`${styles.textarea} ${textareaClassName}`}
@@ -28,7 +46,11 @@ const TextArea: FC<TextAreaProps> = ({ label, name, value, onChange, error }) =>
                 required
                 placeholder=" "
             ></textarea>
-            {error && <span className={styles.errorMessage}>{error}</span>}
+            {error && (
+                <div className={styles.errorContainer}>
+                    <span className={styles.errorMessage}>{error}</span>
+                </div>
+            )}
         </div>
     );
 };

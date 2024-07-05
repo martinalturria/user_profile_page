@@ -1,8 +1,25 @@
 .about {
-    padding: 1rem;
+    padding: 2rem;
     border-bottom: 1px solid #ddd;
+    background-color: var(--background-color);
+    transition: background-color 0.3s ease;
 }
 
 .heading {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
     margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    .about {
+        padding: 3rem;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
 }

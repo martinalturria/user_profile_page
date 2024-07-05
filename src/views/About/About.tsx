@@ -1,8 +1,6 @@
 import React from "react";
-
 import { aboutText } from "../../data/data";
 import AboutText from "../../components/AboutText/AboutText";
-
 import styles from "./About.module.css";
 
 const About = () => {

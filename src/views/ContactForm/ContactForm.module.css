@@ -1,26 +1,37 @@
 .contactForm {
     padding: 1rem;
+    text-align: center;
 }
 
 .heading {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
     margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.formContainer {
+    background-color: rgb(151, 128, 72, 0.2);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 700px;
 }
 
 .successMessage {
     color: green;
     font-weight: bold;
+    font-size: 1.2rem;
 }
 
-.button {
-    padding: 0.5rem 1rem;
-    background-color: #0070f3;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.button:hover {
-    background-color: #005bb5;
+@media (min-width: 768px) {
+    .heading {
+        font-size: 1.5rem;
+    }
 }

@@ -1,5 +1,13 @@
 .name {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
-    margin-left: 1rem;
-  }
+    color: var(--accent-color);
+    font-family: 'Montserrat', sans-serif;
+    transition: color 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    .name {
+        font-size: 1.4rem;
+    }
+}

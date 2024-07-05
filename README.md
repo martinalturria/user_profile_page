@@ -1,6 +1,6 @@
 # User Profile Application
 
-Esta es una aplicación de perfil de usuario construida con Next.js y React. Incluye funcionalidades como un formulario de contacto, lista de intereses.
+Esta es una aplicación de perfil de usuario construida con Next.js y React. Incluye funcionalidades como un formulario de contacto y una lista de intereses.
 
 ## Características
 
@@ -45,6 +45,3 @@ Esta es una aplicación de perfil de usuario construida con Next.js y React. Inc
     -   `data/`: Archivos de datos estáticos que simulan respuestas de API.
 -   `tests/`: Tests unitarios y de integración para los componentes y vistas.
 
-## Pruebas
-
-Las pruebas están ubicadas en la carpeta `tests/`. Para ejecutar las pruebas, usa el comando `npm test`.

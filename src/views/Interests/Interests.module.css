@@ -1,13 +1,49 @@
 .interests {
     padding: 1rem;
     border-bottom: 1px solid #ddd;
-  }
-  
-  .heading {
+}
+
+.heading {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
     margin-bottom: 1rem;
-  }
-  
-  .list {
+    transition: color 0.3s ease;
+}
+
+.listContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     list-style-type: none;
     padding: 0;
-  }
+    width: 100%;
+    max-width: 500px;
+}
+
+@media (min-width: 768px) {
+    .listContainer {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 8rem;
+    }
+
+    .list {
+        width: auto;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
+}

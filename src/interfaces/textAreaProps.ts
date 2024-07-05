@@ -4,4 +4,5 @@ export interface TextAreaProps {
     value: string;
     onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
     error?: string | null;
-  }
+    reset: boolean;
+}
