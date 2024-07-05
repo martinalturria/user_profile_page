@@ -1,15 +1,15 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-
 import Interests from "@/views/Interests/Interests";
+import { interests } from "@/data/data";
 
 describe("Interests", () => {
     it("renders the interests list", () => {
         render(<Interests />);
         expect(screen.getByText("Intereses")).toBeInTheDocument();
-        expect(screen.getByText("Interés 1")).toBeInTheDocument();
-        expect(screen.getByText("Interés 2")).toBeInTheDocument();
-        expect(screen.getByText("Interés 3")).toBeInTheDocument();
+        interests.forEach((interest) => {
+            expect(screen.getByText(interest)).toBeInTheDocument();
+        });
     });
 });
