@@ -1,6 +1,8 @@
 import React from "react";
+
 import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
+
 import TextArea from "@/components/Form/TextArea/TextArea";
 
 describe("TextArea", () => {
@@ -12,6 +14,7 @@ describe("TextArea", () => {
                 value=""
                 onChange={() => {}}
                 error=""
+                reset={false}
             />
         );
         expect(screen.getByLabelText("Mensaje")).toBeInTheDocument();
@@ -26,6 +29,7 @@ describe("TextArea", () => {
                 value=""
                 onChange={handleChange}
                 error=""
+                reset={false}
             />
         );
         fireEvent.change(getByLabelText("Mensaje"), {

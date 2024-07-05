@@ -1,6 +1,8 @@
 import React from "react";
+
 import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
+
 import InputField from "@/components/Form/InputField/InputField";
 
 describe("InputField", () => {
@@ -13,6 +15,7 @@ describe("InputField", () => {
                 value=""
                 onChange={() => {}}
                 error=""
+                reset={false}
             />
         );
         expect(screen.getByLabelText("Nombre")).toBeInTheDocument();
@@ -28,6 +31,7 @@ describe("InputField", () => {
                 value=""
                 onChange={handleChange}
                 error=""
+                reset={false}
             />
         );
         fireEvent.change(getByLabelText("Nombre"), {

@@ -1,5 +1,7 @@
 import React, { FC, useEffect, useState } from "react";
+
 import { TextAreaProps } from "../../../interfaces/textAreaProps";
+
 import styles from "./TextArea.module.css";
 
 const TextArea: FC<TextAreaProps> = ({

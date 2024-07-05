@@ -1,8 +1,9 @@
 import React from "react";
-import UserName from "./UserName/UserName";
-import ProfilePicture from "./ProfilePicture/ProfilePicture";
 
-import { ProfileProps } from "@/interfaces/ProfileProps";
+import ProfilePicture from "./ProfilePicture/ProfilePicture";
+import UserName from "./UserName/UserName";
+
+import { ProfileProps } from "@/interfaces/profileProps";
 
 import styles from "./Profile.module.css";
 

@@ -1,6 +1,6 @@
-import React from "react";
-import { FC } from "react";
-import { InterestItemProps } from "@/interfaces/InterestItemProps";
+import React, { FC } from "react";
+
+import { InterestItemProps } from "@/interfaces/interestItemProps";
 
 import styles from "./InterestItem.module.css";
 

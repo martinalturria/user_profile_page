@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+
 import { useForm } from "../../hooks/useForm";
 import { ContactFormState } from "../../interfaces/contactFormState";
+
 import InputField from "@/components/Form/InputField/InputField";
 import TextArea from "@/components/Form/TextArea/TextArea";
 import SubmitButton from "@/components/Form/SubmitButton/SubmitButton";
 import ConfirmModal from "@/components/Form/ConfirmModal/ConfirmModal";
+
 import styles from "./ContactForm.module.css";
 
 const ContactForm = () => {

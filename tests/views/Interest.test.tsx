@@ -1,8 +1,10 @@
 import React from "react";
+
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import Interests from "@/views/Interests/Interests";
+
 import { interests } from "@/data/data";
+import Interests from "@/views/Interests/Interests";
 
 describe("Interests", () => {
     it("renders the interests list", () => {

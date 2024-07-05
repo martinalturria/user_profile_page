@@ -1,4 +1,5 @@
 import React from "react";
+
 import { interests } from "../../data/data";
 import InterestItem from "../../components/InterestItem/InterestItem";
 

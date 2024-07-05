@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-import { ProfilePictureProps } from "@/interfaces/ProfilePictureProps";
+import { ProfilePictureProps } from "@/interfaces/profilePictureProps";
 
 import styles from "./ProfilePicture.module.css";
 

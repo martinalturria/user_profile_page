@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { FaSun, FaMoon } from "react-icons/fa";
+
 import { name, urlPicture } from "@/data/data";
 import Profile from "../../components/Profile/Profile";
+
 import styles from "./Header.module.css";
 
 const Header = () => {
@@ -15,10 +17,7 @@ const Header = () => {
                 "dark",
                 JSON.parse(savedMode)
             );
-            document.body.classList.toggle(
-                "dark",
-                JSON.parse(savedMode)
-            );
+            document.body.classList.toggle("dark", JSON.parse(savedMode));
         }
     }, []);
 

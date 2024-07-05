@@ -1,5 +1,6 @@
 import React from "react";
-import { UserNameProps } from "@/interfaces/UserNameProps";
+
+import { UserNameProps } from "@/interfaces/userNameProps";
 
 import styles from "./UserName.module.css";
 

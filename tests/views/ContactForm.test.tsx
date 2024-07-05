@@ -1,11 +1,12 @@
 import React from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
+
+import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
 import ContactForm from "@/views/ContactForm/ContactForm";
 
 describe("ContactForm", () => {
-    it("displays success message on successful form submission", () => {
+    it("displays success message on successful form submission", async () => {
         const { getByLabelText, getByText } = render(<ContactForm />);
         fireEvent.change(getByLabelText("Nombre"), {
             target: { value: "Juan" },
@@ -17,7 +18,11 @@ describe("ContactForm", () => {
             target: { value: "Hola, este es un mensaje." },
         });
         fireEvent.click(getByText("Enviar"));
-        expect(getByText("Mensaje enviado con éxito!")).toBeInTheDocument();
+
+        // Espera a que aparezca el SweetAlert
+        await waitFor(() => {
+            expect(screen.getByRole("dialog")).toBeInTheDocument();
+        });
     });
 
     it("disables the submit button until the form is valid", () => {
