@@ -8,13 +8,17 @@ Esta es una aplicación de perfil de usuario construida con Next.js y React. Inc
 -   **Lista de Intereses**: Muestra una lista de intereses del usuario.
 -   **Pruebas Unitarias**: Se incluyen pruebas para los componentes principales usando Jest y React Testing Library.
 
+## Despliegue
+
+Puedes ver la aplicación en funcionamiento [aquí](https://user-profile-page-lake.vercel.app).
+
 ## Instalación
 
 1. Clona el repositorio:
 
     ```sh
     git clone https://github.com/martinalturria/user_profile_page
-    cd user-profile
+    cd user_profile_page
     ```
 
 2. Instala las dependencias:
@@ -24,6 +28,7 @@ Esta es una aplicación de perfil de usuario construida con Next.js y React. Inc
     ```
 
 3. Inicia la aplicación en modo desarrollo:
+
     ```sh
     npm run dev
     ```
@@ -45,3 +50,6 @@ Esta es una aplicación de perfil de usuario construida con Next.js y React. Inc
     -   `data/`: Archivos de datos estáticos que simulan respuestas de API.
 -   `tests/`: Tests unitarios y de integración para los componentes y vistas.
 
+## Contacto
+
+Si tienes alguna pregunta o necesitas más información, por favor, no dudes en contactarme.
